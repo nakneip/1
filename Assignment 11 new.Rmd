@@ -1,0 +1,24 @@
+---
+title: "Assignment 11new"
+author: "Nicole Kneip"
+date: "12/4/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+##options(timeout=100000)
+
+##download.file("https://sdsu.box.com/shared/static/neaac6yoqx9e9x4j8391lzozzy1949p7.zip", destfile = "salary.zip")
+
+##system("unzip salary.zip")
+```
+```{r}
+library(readr)
+State_Employee_Payroll_Data_Calendar_Year_2015_through_Present <- read_delim("State_Employee_Payroll_Data_Calendar_Year_2015_through_Present.tsv", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+```
+
