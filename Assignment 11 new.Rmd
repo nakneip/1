@@ -24,7 +24,21 @@ State_Employee_Payroll_Data_Calendar_Year_2015_through_Present <- read_delim("St
 
 ```{r}
 df <- State_Employee_Payroll_Data_Calendar_Year_2015_through_Present
-df1 <- unique(df$`EmplId-Empl Rcd`)
-dfsamp <- sample(df1,8500)
+##df1 <- unique(df$`EmplId-Empl Rcd`)
+dfsamp <- head(df,8500)
+
+```
+
+
+```{r}
+library(dplyr)
+df_full <- filter(dfsamp, dfsamp$`Full/Part` == "F")
+```
+
+
+```{r}
+library(ggplot2)
+df_full_M <- df_full[df_full$Sex=='M',]
+ggplot(df_full_M,aes(df_full_M$`Pyrl Fiscal Yr`,df_full_M$`Salaries & Wages`))
 ```
 
