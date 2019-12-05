@@ -399,6 +399,9 @@ State_Employee_Payroll_Data_Calendar_Year_2015_through_Present &lt;- read_delim(
 ##   `Term Date` = col_datetime(format = &quot;&quot;)
 ## )</code></pre>
 <pre><code>## See spec(...) for full column specifications.</code></pre>
+<pre class="r"><code>df &lt;- State_Employee_Payroll_Data_Calendar_Year_2015_through_Present
+df1 &lt;- unique(df$`EmplId-Empl Rcd`)
+dfsamp &lt;- sample(df1,8500)</code></pre>
 
 
 

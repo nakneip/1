@@ -22,3 +22,9 @@ State_Employee_Payroll_Data_Calendar_Year_2015_through_Present <- read_delim("St
     "\t", escape_double = FALSE, trim_ws = TRUE)
 ```
 
+```{r}
+df <- State_Employee_Payroll_Data_Calendar_Year_2015_through_Present
+df1 <- unique(df$`EmplId-Empl Rcd`)
+dfsamp <- sample(df1,8500)
+```
+
